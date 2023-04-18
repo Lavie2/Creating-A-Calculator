@@ -1,0 +1,101 @@
+5.	import java.util.*;
+6.	
+7.	// User Defined Complex class
+8.	class Complex {
+9.	
+10.	    // Declaring variables
+11.	    int real, imaginary;
+12.	
+13.	    // Empty Constructor
+14.	    Complex()
+15.	    {
+16.	    }
+17.	
+18.	    // Constructor to accept
+19.	    // real and imaginary part
+20.	    Complex(int tempReal, int tempImaginary)
+21.	    {
+22.	        real = tempReal;
+23.	        imaginary = tempImaginary;
+24.	    }
+25.	
+26.	    // Defining addComp() method
+27.	    // for adding two complex number
+28.	    Complex addComp(Complex C1, Complex C2)
+29.	    {
+30.	        // creating temporary variable
+31.	        Complex temp = new Complex();
+32.	
+33.	        // adding real part of complex numbers
+34.	        temp.real = C1.real + C2.real;
+35.	
+36.	        // adding Imaginary part of complex numbers
+37.	        temp.imaginary = C1.imaginary + C2.imaginary;
+38.	
+39.	        // returning the sum
+40.	        return temp;
+41.	    }
+42.	
+43.	    // Defining subtractComp() method
+44.	    // for subtracting two complex number
+45.	    Complex subtractComp(Complex C1, Complex C2)
+46.	    {
+47.	        // creating temporary variable
+48.	        Complex temp = new Complex();
+49.	
+50.	        // subtracting real part of complex numbers
+51.	        temp.real = C1.real - C2.real;
+52.	
+53.	        // subtracting Imaginary part of complex numbers
+54.	        temp.imaginary = C1.imaginary - C2.imaginary;
+55.	
+56.	        // returning the difference
+57.	        return temp;
+58.	    }
+59.	
+60.	    // Function for printing complex number
+61.	    void printComplexNumber()
+62.	    {
+63.	        System.out.println("Complex number: "
+64.	                        + real + " + "
+65.	                        + imaginary + "i");
+66.	    }
+67.	}
+68.	
+69.	// Main Class
+70.	public class GFG {
+71.	
+72.	    // Main function
+73.	    public static void main(String[] args)
+74.	    {
+75.	
+76.	        // First Complex number
+77.	        Complex C1 = new Complex(3, 2);
+78.	
+79.	        // printing first complex number
+80.	        C1.printComplexNumber();
+81.	
+82.	        // Second Complex number
+83.	        Complex C2 = new Complex(9, 5);
+84.	
+85.	        // printing second complex number
+86.	        C2.printComplexNumber();
+87.	
+88.	        // for Storing the sum
+89.	        Complex C3 = new Complex();
+90.	
+91.	        // calling addComp() method
+92.	        C3 = C3.addComp(C1, C2);
+93.	
+94.	        // printing the sum
+95.	        System.out.print("Sum of ");
+96.	        C3.printComplexNumber();
+97.	
+98.	        // calling subtractComp() method
+99.	        C3 = C3.subtractComp(C1, C2);
+100.	
+101.	        // printing the difference
+102.	        System.out.print("Difference of ");
+103.	        C3.printComplexNumber();
+104.	    }
+105.	}
