@@ -1,0 +1,30 @@
+
+class Shape {
+    public void m(){
+        System.out.println("This is Shape");
+    }
+}
+class Rectangle extends Shape{
+    public void m1(){
+        System.out.println("This is Rectangle");
+    }
+}
+class circle extends Shape{
+    public void m3(){
+        System.out.println("This is Circle");
+    }
+}
+class Square extends Rectangle{
+    public void m2(){
+        System.out.println("This is Square");
+    }
+}
+class Test{
+    public static void main(String args[]){
+        Rectangle r = new Rectangle();
+        Square s = new Square();
+        s.m();
+        s.m1();
+
+    }
+}
